@@ -19,8 +19,8 @@ $ npm install zip-util
 
 ### Extract to a directory
 ```js
-let result = await zipUtil.zip(src, dst)
-let result = await zipUtil.unzip(src, dst)
+let result = await zipUtil.zip(src, dest)
+let result = await zipUtil.unzip(src, dest)
 ```
 
 zip complete 'result' will return 'complete' ,otherwise return error message .
