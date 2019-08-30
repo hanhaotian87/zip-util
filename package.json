@@ -1,0 +1,47 @@
+{
+  "name": "zip-util",
+  "version": "0.0.1",
+  "description": "zip unzip streaming util ",
+  "author": "Michael Han <hhthhy@126.com>",
+  "contributors": [
+    {
+      "name": "Michael Han",
+      "email": "hhthhy@126.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hanhaotian87/zip-util.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "unzipper": ">=0.10.1",
+    "archiver": ">=3.0.0"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.77.0",
+    "dirdiff": ">= 0.0.1 < 1",
+    "iconv-lite": "^0.4.24",
+    "request": "^2.88.0",
+    "stream-buffers": ">= 0.2.5 < 1",
+    "tap": ">= 0.3.0 < 1",
+    "temp": ">= 0.4.0 < 1"
+  },
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  },
+  "keywords": [
+    "zip",
+    "unzip",
+    "zlib",
+    "uncompress",
+    "archive",
+    "stream",
+    "extract"
+  ],
+  "main": "zipUtil.js",
+  "scripts": {
+    "test": "tap test/*.js --jobs=10 --coverage-report=html --no-browser"
+  }
+}
