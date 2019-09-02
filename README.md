@@ -1,7 +1,7 @@
 [![NPM Version][npm-image]][npm-url]
 [![NPM Downloads][downloads-image]][downloads-url]
 
-[npm-image]: https://img.shields.io/npm/v/zip-util.svg
+[npm-image]: https://img.shields.io/npm/v/@hanhaotian/zip-util.svg
 [npm-url]: https://www.npmjs.com/package/@hanhaotian/zip-util
 [downloads-url]: https://www.npmjs.com/package/@hanhaotian/zip-util
 
