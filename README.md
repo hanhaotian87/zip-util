@@ -2,8 +2,8 @@
 [![NPM Downloads][downloads-image]][downloads-url]
 
 [npm-image]: https://img.shields.io/npm/v/zip-util.svg
-[npm-url]: https://npmjs.org/package/zip-util
-[downloads-url]: https://npmjs.org/package/zip-util
+[npm-url]: https://www.npmjs.com/package/@hanhaotian/zip-util
+[downloads-url]: https://www.npmjs.com/package/@hanhaotian/zip-util
 
 # zip-util
 
