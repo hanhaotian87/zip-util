@@ -1,6 +1,7 @@
 const fs = require('fs')
+const path = require('path')
 const archiver = require('archiver')
-const zipper = require('unzipper')
+const unzipper = require('unzipper')
 
 /**
  * unzip zip file from src to dst
@@ -18,7 +19,7 @@ function unzip (src, dest) {
       reject('src is not a zip')
     }
 
-    var unzipExtractor = zipper.Extract({ path: dest })
+    var unzipExtractor = unzipper.Extract({ path: dest })
     unzipExtractor.on('error', function (err) {
       if (err.toString().search('unexpected end of file') === -1) {
         // error
@@ -47,10 +48,11 @@ function unzip (src, dest) {
  * @method zip
  * @param {String} src zip source files
  * @param {String} dest zip file
+ * @param {String} newName zip new filename
  * @return {Object} Promise
  */
 
-function zip (src, dest) {
+function zip (src, dest,newName) {
   let p = new Promise(function (resolve, reject) {
     var output = fs.createWriteStream(dest)
     output.on('close', function () {
@@ -72,7 +74,29 @@ function zip (src, dest) {
     })
 
     archive.pipe(output)
-    archive.directory(src, '')
+    if(typeof(src) === 'string'){
+      let exist = fs.existsSync(src)
+      if(exist){
+        let stat = fs.statSync(src)
+        if(stat.isDirectory()){
+          archive.directory(src, '')
+        }else if(stat.isFile()){
+          if(newName){
+            archive.file(src,{name:newName})
+          }else{
+            archive.file(src,{name:path.basename(src)})
+          }
+        }
+      }else{
+        if(typeof(src) === 'string'){
+          archive.append(src,{name:newName})
+        }
+      }
+    }else if(src instanceof Buffer){
+      archive.append(src,{name:newName})
+    }else if(src instanceof fs.ReadStream){
+      archive.append(src,{name:newName})
+    }
     archive.finalize()
   })
   return p

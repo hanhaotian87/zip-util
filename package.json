@@ -1,17 +1,14 @@
 {
   "name": "zip-util",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "zip unzip streaming util ",
   "author": "Michael Han <hhthhy@126.com>",
   "contributors": [
-    {
-      "name": "Michael Han",
-      "email": "hhthhy@126.com"
-    }
+    "Michael Han <hhthhy@126.com>"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/hanhaotian87/zip-util.git"
+    "url": "git+https://github.com/hanhaotian87/zip-util.git"
   },
   "license": "MIT",
   "dependencies": {
@@ -28,7 +25,6 @@
     "temp": ">= 0.4.0 < 1"
   },
   "directories": {
-    "example": "examples",
     "test": "test"
   },
   "keywords": [
@@ -44,5 +40,9 @@
   "main": "zipUtil.js",
   "scripts": {
     "test": "tap test/*.js --jobs=10 --coverage-report=html --no-browser"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/hanhaotian87/zip-util/issues"
+  },
+  "homepage": "https://github.com/hanhaotian87/zip-util#readme"
 }

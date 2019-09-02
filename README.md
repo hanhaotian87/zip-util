@@ -8,18 +8,19 @@
 # zip-util
 
 This is a util for simple use zip unzip, it used archive.zip and unzipper.
+zip support file, files, string, buffer,stream as src
 
 ## Installation
 
 ```bash
-$ npm install zip-util
+$ npm install @hanhaotian/zip-util
 ```
 
 ## Quick Examples
 
 ### Extract to a directory
 ```js
-let result = await zipUtil.zip(src, dest)
+let result = await zipUtil.zip(src, dest,newName)
 let result = await zipUtil.unzip(src, dest)
 ```
 
