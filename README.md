@@ -7,7 +7,7 @@
 
 # zip-util
 
-This is a util for simple use zip unzip, it used archive.zip and unzipper.
+This is a util for simple use zip unzip, it used archive.zip and unzipper.  
 zip support file, files, string, buffer,stream as src
 
 ## Installation

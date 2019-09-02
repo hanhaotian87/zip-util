@@ -15,7 +15,6 @@ function unzip (src, dest) {
     var reg = /.zip$/
     if (reg.test(src)) {
     } else {
-      // eslint-disable-next-line prefer-promise-reject-errors
       reject('src is not a zip')
     }
 
@@ -88,9 +87,7 @@ function zip (src, dest,newName) {
           }
         }
       }else{
-        if(typeof(src) === 'string'){
-          archive.append(src,{name:newName})
-        }
+        archive.append(src,{name:newName})
       }
     }else if(src instanceof Buffer){
       archive.append(src,{name:newName})
