@@ -1,6 +1,6 @@
 {
   "name": "@hanhaotian/zip-util",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "zip unzip streaming util ",
   "author": "Michael Han <hhthhy@126.com>",
   "contributors": [
